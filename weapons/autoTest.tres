@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="AutoBulletWeapon" load_steps=3 format=3 uid="uid://c12dafx6v5web"]
+
+[ext_resource type="Script" path="res://weapons/classes/bullet/firetype/auto_bullet_weapon.gd" id="1_ax7nq"]
+[ext_resource type="PackedScene" uid="uid://k8yax6t5u6u2" path="res://weapons/pistol/bullet.tscn" id="1_gpy7u"]
+
+[resource]
+script = ExtResource("1_ax7nq")
+bullet = ExtResource("1_gpy7u")
+cooldown = 0.2
+spread_angle = 30.0

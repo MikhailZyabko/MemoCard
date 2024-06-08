@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="ShotgunManualBulletWeapon" load_steps=3 format=3 uid="uid://do3gst41bqke5"]
+
+[ext_resource type="Script" path="res://weapons/classes/bullet/firetype/shotguns/shorgun_manual_bullet_weapon.gd" id="1_oyiw8"]
+[ext_resource type="PackedScene" uid="uid://k8yax6t5u6u2" path="res://weapons/pistol/bullet.tscn" id="1_tjf18"]
+
+[resource]
+script = ExtResource("1_oyiw8")
+bulletcount = 10
+bullet = ExtResource("1_tjf18")
+cooldown = 1.0
+spread_angle = 90.0

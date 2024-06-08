@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="SemiautoBulletWeapon" load_steps=3 format=3 uid="uid://c4ojimqejngqr"]
+
+[ext_resource type="Script" path="res://weapons/classes/bullet/firetype/semiauto_bullet_weapon.gd" id="1_2myxk"]
+[ext_resource type="PackedScene" uid="uid://k8yax6t5u6u2" path="res://weapons/pistol/bullet.tscn" id="1_ma6bw"]
+
+[resource]
+script = ExtResource("1_2myxk")
+count = 5
+between_cooldown = 0.2
+bullet = ExtResource("1_ma6bw")
+cooldown = 1.0
+spread_angle = 20.0

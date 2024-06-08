@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://c88tr4te7o84u"]
+
+[ext_resource type="Script" path="res://props/hero/hero.gd" id="1_ntw0f"]
+[ext_resource type="PackedScene" uid="uid://ciqw4q7pjji24" path="res://props/hero/weapon_control.tscn" id="2_a7ilo"]
+[ext_resource type="Resource" uid="uid://do3gst41bqke5" path="res://weapons/SgMTest.tres" id="3_1imub"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_gxvl8"]
+
+[node name="hero" type="Node3D"]
+script = ExtResource("1_ntw0f")
+
+[node name="hero" type="CharacterBody3D" parent="."]
+
+[node name="body" type="MeshInstance3D" parent="hero"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+mesh = SubResource("BoxMesh_gxvl8")
+
+[node name="weapon_control" parent="hero/body" instance=ExtResource("2_a7ilo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.15256e-07, 0.287005, -0.684933)
+weapon = ExtResource("3_1imub")
+
+[node name="camera" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.34202, 0.939693, 0, -0.939693, 0.34202, 0, 4, 2)
