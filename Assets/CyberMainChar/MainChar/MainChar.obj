@@ -4,7 +4,7 @@
 o 
 
 # material
-mtllib Cyber-1.mtl
+mtllib MainChar.mtl
 usemtl palette
 
 # normals
