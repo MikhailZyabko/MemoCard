@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://c88tr4te7o84u"]
 
-[ext_resource type="Script" path="res://props/hero/hero.gd" id="1_ntw0f"]
-[ext_resource type="PackedScene" uid="uid://ciqw4q7pjji24" path="res://props/hero/weapon_control.tscn" id="2_a7ilo"]
+[ext_resource type="Script" path="res://scripts/hero/hero.gd" id="1_ntw0f"]
+[ext_resource type="PackedScene" uid="uid://ciqw4q7pjji24" path="res://scripts/hero/weapon_control.tscn" id="2_a7ilo"]
 [ext_resource type="Resource" uid="uid://do3gst41bqke5" path="res://weapons/SgMTest.tres" id="3_1imub"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_gxvl8"]

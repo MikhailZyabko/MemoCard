@@ -3,6 +3,12 @@ extends Weapon
 class_name BulletWeapon
 
 @export var bullet:PackedScene
+@export var bulletPoolSize:int
+
+var bulletPool:ObjectPool = ObjectPool.new()
+
+func initialize():
+	bulletPool.scene = bullet
 
 func pull_triger(scene:SceneTree):
 	setcooldown(scene)
@@ -12,9 +18,11 @@ func release_triger():
 	isfiring = false
 
 func shoot_bullet(scene:SceneTree):
-	var new_bullet = bullet.instantiate()
+	var new_bullet = bulletPool.instantiate()
 	var angle = randf_range(-spread_angle/2, spread_angle/2)
 	scene.root.add_child(new_bullet)
 	new_bullet.global_position = originpos
 	new_bullet.global_rotation = originrotate
 	new_bullet.rotate_y(deg_to_rad(angle))
+	new_bullet.weapon = self
+	new_bullet.poolready()

@@ -12,6 +12,9 @@ var originrotate:Vector3
 var isfiring = false
 var oncooldown = false
 
+func initialize() -> void:
+	pass
+
 func pull_triger(scene:SceneTree) -> void:
 	pass
 

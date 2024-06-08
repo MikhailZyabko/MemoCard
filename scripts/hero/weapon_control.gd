@@ -2,6 +2,9 @@ extends Node3D
 
 @export var weapon:Weapon
 
+func _ready():
+	weapon.initialize()
+
 func _physics_process(delta):
 	weapon.originpos = global_position
 	weapon.originrotate = self.global_rotation/2
