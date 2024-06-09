@@ -5,6 +5,15 @@ class_name ObjectPool
 var pool:Dictionary
 var scene:PackedScene
 
+func add(count:int):
+	for i in count:
+		var existingInstance = pool.get(scene, null)
+		var instance = scene.instantiate()
+		if existingInstance:
+			pool[scene].push_back(instance)
+		else:
+			pool[scene] = [instance]
+
 func instantiate():
 	var existingInstance = pool.get(scene, null)
 	if existingInstance:
@@ -21,5 +30,6 @@ func return_instabce(instance):
 	if existingInstance:
 		pool[scene].push_back(instance)
 	else:
-		print("Create")
+		print("create")
+		print(instance)
 		pool[scene] = [instance]

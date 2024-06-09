@@ -7,6 +7,6 @@
 script = ExtResource("1_oyiw8")
 bulletcount = 10
 bullet = ExtResource("1_tjf18")
-bulletPoolSize = 0
+bulletPoolSize = 30
 cooldown = 1.0
 spread_angle = 90.0

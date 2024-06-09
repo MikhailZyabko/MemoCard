@@ -1,0 +1,18 @@
+[gd_scene load_steps=5 format=3 uid="uid://b4a5p4dpfpr0a"]
+
+[ext_resource type="Script" path="res://enemy.gd" id="1_settt"]
+[ext_resource type="PackedScene" uid="uid://ciqw4q7pjji24" path="res://weapons/classes/weapon_control/weapon_control.tscn" id="3_3k0py"]
+[ext_resource type="Resource" uid="uid://c12dafx6v5web" path="res://weapons/autoTest.tres" id="3_gvegc"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_n2chp"]
+
+[node name="enemy" type="CharacterBody3D"]
+script = ExtResource("1_settt")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+mesh = SubResource("CapsuleMesh_n2chp")
+
+[node name="weapon_control" parent="." instance=ExtResource("3_3k0py")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.07376, -0.764752)
+weapon = ExtResource("3_gvegc")

@@ -6,5 +6,6 @@
 [resource]
 script = ExtResource("1_ax7nq")
 bullet = ExtResource("1_gpy7u")
-cooldown = 0.2
+bulletPoolSize = 10
+cooldown = 0.5
 spread_angle = 30.0
