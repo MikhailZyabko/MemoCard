@@ -37,6 +37,7 @@ func _process(delta):
 
 	if direction != Vector3.ZERO:
 		direction = direction.normalized()
+		$Pivot.basis = Basis.looking_at(direction)
 	
 	target_velocity.x = direction.x * speed
 	target_velocity.z = direction.z * speed

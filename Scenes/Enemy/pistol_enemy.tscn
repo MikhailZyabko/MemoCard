@@ -1,27 +1,37 @@
-[gd_scene load_steps=8 format=3 uid="uid://cr5mphb378jfl"]
+[gd_scene load_steps=10 format=3 uid="uid://cr5mphb378jfl"]
 
 [ext_resource type="Script" path="res://scripts/enemy.gd" id="1_ouavn"]
 [ext_resource type="PackedScene" uid="uid://ciqw4q7pjji24" path="res://weapons/classes/weapon_control/weapon_control.tscn" id="2_tei47"]
 [ext_resource type="Resource" uid="uid://c12dafx6v5web" path="res://weapons/autoTest.tres" id="3_jlf83"]
 [ext_resource type="Texture2D" uid="uid://fef5c58hau" path="res://Assets/Models/EnemyRobots/Robot-Gun.png" id="4_fk36q"]
-[ext_resource type="ArrayMesh" uid="uid://dx6ta4chsb8u1" path="res://Assets/Models/EnemyRobots/Robot-Gun.obj" id="5_23ya0"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_e7und"]
-albedo_texture = ExtResource("4_fk36q")
+[ext_resource type="ArrayMesh" uid="uid://c6rry4ubq3jlx" path="res://Assets/Models/EnemyRobots/Robot-Pistol.obj" id="5_a36do"]
+[ext_resource type="ArrayMesh" uid="uid://dviuxn8g2xtu0" path="res://Assets/Models/EnemyRobots/Robot-PistolPropeller.obj" id="6_q6cmr"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_hf771"]
+size = Vector3(4.46254, 0.633789, 1)
 
-[node name="gun_enemy" type="CharacterBody3D"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xp07k"]
+albedo_texture = ExtResource("4_fk36q")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8mp66"]
+albedo_texture = ExtResource("4_fk36q")
+
+[node name="pistol_enemy" type="CharacterBody3D"]
 script = ExtResource("1_ouavn")
 
 [node name="weapon_control" parent="." instance=ExtResource("2_tei47")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.07376, -0.764752)
 weapon = ExtResource("3_jlf83")
 
-[node name="Robot-gun" type="MeshInstance3D" parent="."]
-material_override = SubResource("StandardMaterial3D_e7und")
-mesh = ExtResource("5_23ya0")
-
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 2.47115, 0, 0, 0, 1, 0, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 2.47115, 0, 0, 0, 1, -0.0120468, 1.45156, 0)
 shape = SubResource("BoxShape3D_hf771")
+
+[node name="Robot-pistol" type="MeshInstance3D" parent="."]
+material_override = SubResource("StandardMaterial3D_xp07k")
+mesh = ExtResource("5_a36do")
+
+[node name="Robot-pistolPropeller" type="MeshInstance3D" parent="Robot-pistol"]
+material_override = SubResource("StandardMaterial3D_8mp66")
+mesh = ExtResource("6_q6cmr")
+skeleton = NodePath("../..")

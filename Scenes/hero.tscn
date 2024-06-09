@@ -20,3 +20,5 @@ skeleton = NodePath("")
 [node name="weapon_control" parent="body" instance=ExtResource("2_8dde1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.15256e-07, 0.287005, -0.684933)
 weapon = ExtResource("3_1imub")
+
+[node name="Pivot" type="Node3D" parent="."]

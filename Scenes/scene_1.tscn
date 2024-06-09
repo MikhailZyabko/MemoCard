@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://brynkl0hxxc0d"]
 
 [ext_resource type="PackedScene" uid="uid://dgbnaiwwxlvel" path="res://Scenes/hero.tscn" id="1_15rdw"]
-[ext_resource type="PackedScene" uid="uid://cdrxvmkij2lq3" path="res://Scenes/enemySpawner.tscn" id="3_nmwib"]
+[ext_resource type="PackedScene" uid="uid://b6da27bgd3pd5" path="res://Scenes/enemySpawner.tscn" id="3_nmwib"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_blmw3"]
 size = Vector3(100, 0.001, 100)
