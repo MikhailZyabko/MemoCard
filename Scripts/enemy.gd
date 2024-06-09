@@ -14,10 +14,10 @@ func _ready():
 
 func _physics_process(delta):
 	look_at(target.global_position)
-	var t = (target.global_position - global_position).length()
+	var d = (target.global_position - global_position).length()
 	var input_dir = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
 	var direction = (-transform.basis.z).normalized()
-	if direction and t > distance:
+	if direction and d > distance:
 		velocity.x = direction.x * speed
 		velocity.z = direction.z * speed
 		wc.stop_firing()

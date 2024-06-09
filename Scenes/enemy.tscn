@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://b4a5p4dpfpr0a"]
 
-[ext_resource type="Script" path="res://enemy.gd" id="1_settt"]
+[ext_resource type="Script" path="res://scripts/enemy.gd" id="1_settt"]
 [ext_resource type="PackedScene" uid="uid://ciqw4q7pjji24" path="res://weapons/classes/weapon_control/weapon_control.tscn" id="3_3k0py"]
 [ext_resource type="Resource" uid="uid://c12dafx6v5web" path="res://weapons/autoTest.tres" id="3_gvegc"]
 

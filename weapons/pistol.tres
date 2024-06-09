@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="BulletWeapon" load_steps=3 format=3 uid="uid://8o0avh0dppxq"]
 
-[ext_resource type="PackedScene" uid="uid://k8yax6t5u6u2" path="res://weapons/pistol/bullet.tscn" id="1_8gnoj"]
+[ext_resource type="PackedScene" uid="uid://k8yax6t5u6u2" path="res://weapons/bullets/bullet.tscn" id="1_8gnoj"]
 [ext_resource type="Script" path="res://weapons/classes/bullet/bullet_weapon.gd" id="1_nbg4j"]
 
 [resource]

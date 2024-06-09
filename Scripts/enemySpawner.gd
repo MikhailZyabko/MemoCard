@@ -1,9 +1,9 @@
 extends Node3D
 
-var enemy_pool_size = 10
-var enemy_node: Node
+@export var enemy_pool_size = 10
+@export var enemy_node: Node
 var enemy_pool: Array
-var spawn_interval = 2.0
+@export var spawn_interval = 2.0
 var last_spawn_time = 0.0
 
 func _ready():

@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="ManualBulletWeapon" load_steps=3 format=3 uid="uid://tlfhe830vcpy"]
 
 [ext_resource type="Script" path="res://weapons/classes/bullet/firetype/manual_bullet_weapon.gd" id="1_737o2"]
-[ext_resource type="PackedScene" uid="uid://k8yax6t5u6u2" path="res://weapons/pistol/bullet.tscn" id="1_bh88m"]
+[ext_resource type="PackedScene" uid="uid://k8yax6t5u6u2" path="res://weapons/bullets/bullet.tscn" id="1_bh88m"]
 
 [resource]
 script = ExtResource("1_737o2")

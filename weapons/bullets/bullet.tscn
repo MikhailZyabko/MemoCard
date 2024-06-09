@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://k8yax6t5u6u2"]
 
-[ext_resource type="Script" path="res://weapons/bullets/classes/bullet.gd" id="1_8oqyy"]
+[ext_resource type="Script" path="res://weapons/bullets/classes/bullet.gd" id="1_j22ln"]
 
 [sub_resource type="SphereMesh" id="SphereMesh_wng7u"]
 radius = 0.05
@@ -10,7 +10,7 @@ height = 0.1
 radius = 0.0561948
 
 [node name="bullet" type="Area3D"]
-script = ExtResource("1_8oqyy")
+script = ExtResource("1_j22ln")
 speed = 1.0
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
