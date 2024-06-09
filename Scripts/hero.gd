@@ -16,12 +16,12 @@ func _process(delta):
 	var cursor_pos = drop_plane.intersects_ray(from, to)
 	hero.look_at(cursor_pos, Vector3.UP)
 	
-	if Input.is_action_just_pressed("ui_accept"):
+	if Input.is_action_just_pressed("shoot"):
 		wc.start_firing()
-	if Input.is_action_just_released("ui_accept"):
+	if Input.is_action_just_released("shoot"):
 		wc.stop_firing()
 	
-	var input_dir = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
+	var input_dir = Input.get_vector("left", "right", "up", "down")
 	var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	if direction:
 		translate(direction * 5 * delta)

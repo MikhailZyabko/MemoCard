@@ -15,7 +15,7 @@ var oncooldown = false
 func initialize() -> void:
 	pass
 
-func pull_triger(scene:SceneTree) -> void:
+func pull_triger(_scene:SceneTree) -> void:
 	pass
 
 func release_triger() -> void:

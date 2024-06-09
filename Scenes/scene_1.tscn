@@ -25,9 +25,10 @@ mesh = SubResource("PlaneMesh_wm467")
 
 [node name="hero" parent="." instance=ExtResource("1_15rdw")]
 
-[node name="enemy2" parent="." instance=ExtResource("2_e1rl4")]
+[node name="123" parent="." instance=ExtResource("2_e1rl4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.1472, 0.000499249, -2.25026)
 distance = 2
 
-[node name="Node3D" parent="." instance=ExtResource("3_nmwib")]
+[node name="Node3D" parent="." node_paths=PackedStringArray("enemy_node") instance=ExtResource("3_nmwib")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -35.4163, 0.000499725, -31.5211)
+enemy_node = NodePath("../123")
