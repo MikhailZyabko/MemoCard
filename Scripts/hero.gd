@@ -4,6 +4,8 @@ extends Node3D
 @onready var hero = $hero
 @onready var wc = $hero/body/weapon_control
 
+@export var speed:float = 5.0
+@export var health = 100
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -24,4 +26,9 @@ func _process(delta):
 	var input_dir = Input.get_vector("left", "right", "up", "down")
 	var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	if direction:
-		translate(direction * 5 * delta)
+		translate(direction * speed * delta)
+
+func take_damage(damage):
+	health -= damage
+	if health <= 0:
+		print("Lose")

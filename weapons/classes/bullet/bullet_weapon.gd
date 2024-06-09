@@ -11,13 +11,12 @@ func initialize():
 	bulletPool.scene = bullet
 	bulletPool.add(bulletPoolSize)
 
-func pull_triger(scene:SceneTree):
-	if isfiring or oncooldown: return
+func pull_triger(scene:SceneTree) -> void:
+	if oncooldown: return
 	setcooldown(scene)
-	isfiring = true
 
-func release_triger():
-	isfiring = false
+func release_triger() -> void:
+	pass
 
 func shoot_bullet(scene:SceneTree):
 	var new_bullet = bulletPool.instantiate()
@@ -27,5 +26,5 @@ func shoot_bullet(scene:SceneTree):
 	new_bullet.global_position = originpos
 	new_bullet.global_rotation = originrotate
 	new_bullet.rotate_y(deg_to_rad(angle))
-	new_bullet.weapon = self
+	new_bullet.pool = bulletPool
 	new_bullet.poolready()

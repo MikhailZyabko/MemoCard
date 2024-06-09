@@ -17,6 +17,7 @@ func add(count:int):
 func instantiate():
 	var existingInstance = pool.get(scene, null)
 	if existingInstance:
+		print("take")
 		var instance = existingInstance.pop_back()
 		if existingInstance.size() == 0:
 			pool.erase(scene)
@@ -30,6 +31,4 @@ func return_instabce(instance):
 	if existingInstance:
 		pool[scene].push_back(instance)
 	else:
-		print("create")
-		print(instance)
 		pool[scene] = [instance]

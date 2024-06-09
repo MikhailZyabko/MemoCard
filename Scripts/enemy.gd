@@ -4,6 +4,9 @@ class_name Enemy
 
 @export var speed = 5.0
 @export var distance = 10
+@export var health = 100
+
+var enemy_spawner_ID:Node
 
 @onready var wc = $weapon_control
 
@@ -26,3 +29,9 @@ func _physics_process(delta):
 		wc.start_firing()
 
 	move_and_slide()
+
+func take_damage(damage):
+	health -= damage
+	if health <= 0:
+	#	enemy_spawner_ID.return_enemy_to_pool(self)
+		print("Kill")

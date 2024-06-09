@@ -5,7 +5,7 @@ extends Node3D
 func _ready():
 	weapon.initialize()
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	weapon.originpos = global_position
 	weapon.originrotate = self.global_rotation/2
 
