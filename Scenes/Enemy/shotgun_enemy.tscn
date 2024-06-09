@@ -1,0 +1,27 @@
+[gd_scene load_steps=8 format=3 uid="uid://dmog1ifu83m2p"]
+
+[ext_resource type="Script" path="res://scripts/enemy.gd" id="1_c5a1h"]
+[ext_resource type="PackedScene" uid="uid://ciqw4q7pjji24" path="res://weapons/classes/weapon_control/weapon_control.tscn" id="2_3l2y3"]
+[ext_resource type="Resource" uid="uid://c12dafx6v5web" path="res://weapons/autoTest.tres" id="3_5s81e"]
+[ext_resource type="Texture2D" uid="uid://fef5c58hau" path="res://Assets/Models/EnemyRobots/Robot-Gun.png" id="4_idkee"]
+[ext_resource type="ArrayMesh" uid="uid://dx6ta4chsb8u1" path="res://Assets/Models/EnemyRobots/Robot-Gun.obj" id="5_udme2"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_e7und"]
+albedo_texture = ExtResource("4_idkee")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hf771"]
+
+[node name="gun_enemy" type="CharacterBody3D"]
+script = ExtResource("1_c5a1h")
+
+[node name="weapon_control" parent="." instance=ExtResource("2_3l2y3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.07376, -0.764752)
+weapon = ExtResource("3_5s81e")
+
+[node name="Robot-gun" type="MeshInstance3D" parent="."]
+material_override = SubResource("StandardMaterial3D_e7und")
+mesh = ExtResource("5_udme2")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 2.47115, 0, 0, 0, 1, 0, 0, 0)
+shape = SubResource("BoxShape3D_hf771")

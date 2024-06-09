@@ -1,9 +1,12 @@
-extends Node3D
+extends CharacterBody3D
 
 @onready var camera = $camera
 @onready var hero = $hero
 @onready var wc = $hero/body/weapon_control
 
+@export var speed = 50.0
+
+var target_velocity = Vector3.ZERO
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -21,7 +24,22 @@ func _process(delta):
 	if Input.is_action_just_released("ui_accept"):
 		wc.stop_firing()
 	
-	var input_dir = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
-	var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
-	if direction:
-		translate(direction * 5 * delta)
+	var direction = Vector3.ZERO
+
+	if Input.is_action_pressed("move_right"):
+		direction.x += 1
+	if Input.is_action_pressed("move_left"):
+		direction.x -= 1
+	if Input.is_action_pressed("move_back"):
+		direction.z += 1
+	if Input.is_action_pressed("move_forward"):
+		direction.z -= 1
+
+	if direction != Vector3.ZERO:
+		direction = direction.normalized()
+	
+	target_velocity.x = direction.x * speed
+	target_velocity.z = direction.z * speed
+	
+	velocity = target_velocity
+	move_and_slide()

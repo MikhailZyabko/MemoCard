@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://n1rbp2vt3g5k"
+path="res://.godot/imported/Robot-Rocket.obj-9c695b9b4cfe83f0fde2c94b53b9cd63.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Robot-Rocket.obj-9c695b9b4cfe83f0fde2c94b53b9cd63.mesh"]
+
+source_file="res://Assets/Models/EnemyRobots/Robot-Rocket.obj"
+dest_files=["res://.godot/imported/Robot-Rocket.obj-9c695b9b4cfe83f0fde2c94b53b9cd63.mesh", "res://.godot/imported/Robot-Rocket.obj-9c695b9b4cfe83f0fde2c94b53b9cd63.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

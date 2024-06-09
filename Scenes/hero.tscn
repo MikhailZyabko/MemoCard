@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://c88tr4te7o84u"]
+[gd_scene load_steps=5 format=3 uid="uid://dgbnaiwwxlvel"]
 
 [ext_resource type="Script" path="res://scripts/hero.gd" id="1_ntw0f"]
 [ext_resource type="PackedScene" uid="uid://ciqw4q7pjji24" path="res://weapons/classes/weapon_control/weapon_control.tscn" id="2_8dde1"]
@@ -6,18 +6,17 @@
 
 [sub_resource type="BoxMesh" id="BoxMesh_gxvl8"]
 
-[node name="hero" type="Node3D" groups=["player"]]
+[node name="hero" type="CharacterBody3D" groups=["player"]]
 script = ExtResource("1_ntw0f")
-
-[node name="hero" type="CharacterBody3D" parent="."]
-
-[node name="body" type="MeshInstance3D" parent="hero"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
-mesh = SubResource("BoxMesh_gxvl8")
-
-[node name="weapon_control" parent="hero/body" instance=ExtResource("2_8dde1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.15256e-07, 0.287005, -0.684933)
-weapon = ExtResource("3_1imub")
 
 [node name="camera" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.34202, 0.939693, 0, -0.939693, 0.34202, 0, 6, 3)
+
+[node name="body" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+mesh = SubResource("BoxMesh_gxvl8")
+skeleton = NodePath("")
+
+[node name="weapon_control" parent="body" instance=ExtResource("2_8dde1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.15256e-07, 0.287005, -0.684933)
+weapon = ExtResource("3_1imub")

@@ -1,7 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://bphevdmisbkkb"]
+[gd_scene load_steps=5 format=3 uid="uid://brynkl0hxxc0d"]
 
-[ext_resource type="PackedScene" uid="uid://c88tr4te7o84u" path="res://Scenes/hero.tscn" id="1_15rdw"]
-[ext_resource type="PackedScene" uid="uid://b4a5p4dpfpr0a" path="res://Scenes/enemy.tscn" id="2_e1rl4"]
+[ext_resource type="PackedScene" uid="uid://dgbnaiwwxlvel" path="res://Scenes/hero.tscn" id="1_15rdw"]
 [ext_resource type="PackedScene" uid="uid://cdrxvmkij2lq3" path="res://Scenes/enemySpawner.tscn" id="3_nmwib"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_blmw3"]
@@ -24,10 +23,6 @@ shape = SubResource("BoxShape3D_blmw3")
 mesh = SubResource("PlaneMesh_wm467")
 
 [node name="hero" parent="." instance=ExtResource("1_15rdw")]
-
-[node name="enemy2" parent="." instance=ExtResource("2_e1rl4")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.1472, 0.000499249, -2.25026)
-distance = 2
 
 [node name="Node3D" parent="." instance=ExtResource("3_nmwib")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -35.4163, 0.000499725, -31.5211)
